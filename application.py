@@ -30,7 +30,7 @@ scaler=load("model_scaler.pkl")
 app= application = Flask(__name__)
 
 
-# client = MongoClient("mongodb+srv://prashanth:BnHRQrqZHdnosfEe@cluster0.cpydc.mongodb.net/CommonDatabase?retryWrites=true&w=majority")
+# client = MongoClient("mongodb+srv://XXXX")
 # db= client["CommonDatabase"]
 # collection = db["emp_churn"]
 
@@ -134,22 +134,12 @@ def predict():
         # collection.insert_one(dic)
 
 
-        # if probability >=50:
-        #     # result=str(round(probability,2)) + " Probability that an employee will voluntarily quit his position"
-        #     return render_template('index.html', Data=f" Job Satisfaction: {data[1]}, Remuneration_Change: {data[2]},\
-        #            Performance_Score: {data[3]}, Displinary Action: {data[0]}, Behavorial_Judgement: {data[4]} ", Chance_to_Leave=f"An employee's likelihood of\
-        #              resigning willingly from their job is {round(probability,2)}%") # Confidence level: {round(probability[1]*100,1)}%")
-
-        # else:
-        #     # result = str(round(probability,2)) + " Probability that an employee will voluntarily quit his position"
-        #     return render_template('index.html',  Data=f" Job Satisfaction:\t{data[1]}, Remuneration_Change:\t{data[2]},\
-        #            Performance_Score:\t{data[3]}, Displinary Action:\t{data[0]}, Behavorial_Judgement:\t{data[4]} ", Employee_will_retain=f"An employee's likelihood of\
-        #              resigning willingly from their job is {round(probability,2)}%") # Confidence level: {round(probability[1]*100,1)}%")
+        
         
 # @app.route('/feedback',methods=['POST'])
 # def feedback():
     
-#     # client = MongoClient("mongodb+srv://prashanth:BnHRQrqZHdnosfEe@cluster0.cpydc.mongodb.net/CommonDatabase?retryWrites=true&w=majority")
+#     # client = MongoClient("mongodb+srv://XXXX")
 #     # db= client["CommonDatabase"]
 #     # collection_set = db["emp_churn_feedback"] 
 
