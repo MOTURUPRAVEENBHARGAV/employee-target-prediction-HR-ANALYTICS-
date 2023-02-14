@@ -21,11 +21,7 @@ from flask_ngrok import run_with_ngrok
 import pytz
 # import json
 
-#load the MODEL 
-KNN= load("KNeighborsClassifier.pkl")
-# GDB= pickle.load(open("GradientboostClassifier.pkl","rb"))
-  #Scaler
-scaler=load("model_scaler.pkl")
+
 
 app= application = Flask(__name__)
 
@@ -33,6 +29,11 @@ app= application = Flask(__name__)
 # client = MongoClient("mongodb+srv://XXXX")
 # db= client["CommonDatabase"]
 # collection = db["emp_churn"]
+#load the MODEL 
+KNN= load("KNeighborsClassifier.pkl")
+# GDB= pickle.load(open("GradientboostClassifier.pkl","rb"))
+  #Scaler
+scaler=load("model_scaler.pkl")
 
 
 # model = load("lr_modelWSC.pkl")
