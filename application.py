@@ -23,7 +23,7 @@ import pytz
 
 
 
-app= application = Flask(__name__)
+application = Flask(__name__)
 
 #load the MODEL 
 KNN= load("KNeighborsClassifier.pkl")
@@ -31,13 +31,13 @@ KNN= load("KNeighborsClassifier.pkl")
   #Scaler
 scaler=load("model_scaler.pkl")
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 # E:\DESKT\INTERNSHIPS\Talent Spotify\ML\model\randomforest_model (2).pkl
 def Home():
     return render_template('index.html')
 
 
-@app.route('/predict',methods=['POST'])
+@application.route('/predict',methods=['POST'])
 def predict():
 
     if request.method == 'POST':
@@ -111,7 +111,7 @@ def predict():
         
 
         
-@app.route('/jsondata',methods=['POST', 'GET'])
+@application.route('/jsondata',methods=['POST', 'GET'])
 def jsondata():
     inputs = {"inputs":[{"created at" : data[0], "target date": data[1],\
                         "total_days": data[4], "updated date" : data[2], "actual_days": data[5],\
@@ -130,6 +130,6 @@ def jsondata():
         
                 
 if __name__=="__main__":
-    app.run(debug=True)
+    application.run(debug=True)
 # if __name__=="__main__":
 #     app.run(host='0.0.0.0', port=8080)
