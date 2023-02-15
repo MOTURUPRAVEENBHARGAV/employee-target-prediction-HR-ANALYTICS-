@@ -98,15 +98,15 @@ def predict():
         print(data)
 
         if probability >=0.70:
-            return render_template('index.html', Data=f" created at : {data[0]}, target date: {data[1]},\
-                        total_days: {data[4]}, updated date : {data[2]}, actual_days: {data[5]},actual_work: {int(data[3])/100},\
-                        remaining_days: {data[6]}, remaining_work: {data[7]} ", good_progress=f"The probability of doing the \
+            return render_template('index.html', Data=f" Created Date: {data[0]}, Target Date: {data[1]},\
+                        Total Days: {data[4]}, Updated Date : {data[2]}, Actual Days: {data[5]}, Actual Work: {int(data[3])/100},\
+                        Remaining Days: {data[6]}, Remaining Work: {data[7]} ", good_progress=f"The probability of doing the \
                         task by the deadline is {round(probability,2)}") # Confidence level: {round(probability[1]*100,1)}%")
         
         if probability <0.70:
-             return render_template('index.html', Data=f" created at : {data[0]}, target date: {data[1]},\
-                        total_days: {data[4]}, updated date : {data[2]}, actual_days: {data[5]},actual_work: {int(data[3])/100},\
-                        remaining_days: {data[6]}, remaining_work: {data[7]} ", bad_progress=f"The probability of doing the \
+             return render_template('index.html', Data=f" Created Date: {data[0]}, Target Date: {data[1]},\
+                        Total Days: {data[4]}, Updated Date : {data[2]}, Actual Days: {data[5]}, Actual Work: {int(data[3])/100},\
+                        Remaining Days: {data[6]}, Remaining Work: {data[7]} ", bad_progress=f"The probability of doing the \
                         task by the deadline is {round(probability,2)}") # Confidence level: {round(probability[1]*100,1)}%")
         
 
