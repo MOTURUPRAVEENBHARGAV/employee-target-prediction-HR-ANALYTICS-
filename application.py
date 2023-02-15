@@ -113,11 +113,11 @@ def predict():
         
 @application.route('/jsondata',methods=['POST', 'GET'])
 def jsondata():
-    inputs = {"inputs":[{"created at" : data[0], "target date": data[1],\
+    {"created at" : data[0], "target date": data[1],\
                         "total_days": data[4], "updated date" : data[2], "actual_days": data[5],\
                             "actual_work" : int(data[3])/100,\
-                        "remaining_days": data[6], "remaining_work": data[7],"work_probability":round(probability,2)},
-                ]}
+                        "remaining_days": data[6], "remaining_work": data[7],"work_probability":round(probability,2)}
+                
 
     return inputs
 
